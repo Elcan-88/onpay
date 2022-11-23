@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ayarlar - Birkassa</title>
+	<link rel="shortcut icon" href="assets/images/logo/favicon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/splide.min.css">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/themes/splide-default.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+
+<div id="layout-wrapper">
+	<header id="page-topbar">
+		<div class="navbar-header">
+			<div class="d-flex">
+				<div class="navbar-brand-box">
+					<img src="assets/images/logo/onpay-logo.png" class="logo">
+				</div>
+			</div>
+			<div class="d-flex">
+				<div class="dropdown ms-2">
+					<button type="button" class="btn header-item noti-icon position-relative" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img src="assets/images/icons/bell.svg">
+						<span class="badge translate-middle bg-danger rounded-circle">
+							<span class="visually-hidden">New alerts</span>
+						</span>
+					</button>
+				</div>
+				<div class="dropdown ms-3 just-center">
+					<button type="button" class="btn d-none d-lg-flex header-item align-items-center" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="profile">FA</div>
+						<p class="me-3">Fuad Əliyev</p>
+						<img src="assets/images/icons/arrow-bottom.svg">
+					</button>
+					<input type="checkbox" name="" id="menu" class="checkbox">
+					<label for="menu" onclick="toggleMenu()">
+						<img src="assets/images/icons/hamburger-menu.svg" class="d-lg-none hamburger-menu">
+						<button type="button" class="btn-close text-reset close-menu d-none" aria-label="Close">
+							<img src="assets/images/icons/close-sm.svg">
+						</button>
+					</label>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- ==== LEFT SIDEBAR START ====  -->
+	<div class="vertical-menu d-none d-lg-block">
+		<div id="sidebar-menu">
+			<ul class="list-unstyled" id="side-menu">
+				<li>
+					<a href="">
+						<img src="assets/images/icons/analytics_black_24dp.svg">
+						<p>İdarə paneli</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/integration_instructions_black_24dp.svg">
+						<p>Vebsaytlar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/receipt_black_24dp.svg">
+						<p>Fakturalar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/repeat_black_24dp.svg">
+						<p>Təkrarlanan fakturalar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/customer.svg">
+						<p>Müştərilər</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ==== LEFT SIDEBAR END ====  -->
+
+	<!-- ==== MOBILE MENU ==== -->
+	<div class="mobile-menu d-lg-none">
+		<div class="mobile-navbar">
+			<div class="container">
+				<div class="position-relative">
+					<div class="dropdown">
+						<button class="btn shadow-none border w-100 bg-default just-between-center dropdown-toggle px-3 py-2" data-bs-toggle="dropdown">
+							<div class="just-center">
+								<div class="profile">FA</div>
+								<p class="me-3">Fuad Əliyev</p>
+							</div>
+							<img src="assets/images/icons/arrow-bottom_large.svg">
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a href="#" class="dropdown-item text-danger">Hesabdan çıxış</a>
+							</li>
+						</ul>
+					</div>
+					<div class="horizontal-menu mt-5">
+						<div id="sidebar-menu">
+							<ul class="list-unstyled" id="side-menu">
+								<li>
+									<a href="">
+										<img src="assets/images/icons/analytics_black_24dp.svg">
+										<p>Analitika</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/integration_instructions_black_24dp.svg">
+										<p>İnteqrasiyalar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/repeat_black_24dp.svg">
+										<p>Təkrarlanan fakturalar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/receipt_black_24dp.svg">
+										<p>Fakturalar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/account_balance_wallet_black_24dp.svg">
+										<p>Balans</p>
+									</a>
+								</li>
+							</ul>
+
+							<ul class="list-unstyled border-top mt-60 pt-2">
+								<li class="menu-active">
+									<a href="">
+										<img src="assets/images/icons/settings.svg">
+										<p>Ayarlar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/help_outline_black_24dp.svg">
+										<p>Dəstək</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ==== END MOBILE MENU ==== -->
+
+
+	<div class="main-content">
+		<div class="page-content">
+			<div class="container">
+				<div class="just-between flex-lg-row flex-column align-items-start">
+					<h1 class="mb-2">Ayarlar</h1>
+				</div>
+				<div class="border-md-bottom setting-tabs mt-3 pb-2">
+					<div class="just-between flex-md-row flex-column">
+						<ul class="nav nav-tabs-custom card-header-tabs d-none d-md-flex" id="pills-tab" role="tablist">
+							<li class="nav-item">
+								<a href="#business-info" class="nav-link active" data-bs-toggle="tab" aria-selected="true">Biznes məlumatları</a>
+							</li>
+							<li class="nav-item">
+								<a href="#account-set" class="nav-link" data-bs-toggle="tab" aria-selected="false">Hesab ayarları</a>
+							</li>
+							<li class="nav-item">
+								<a href="#pass" class="nav-link" data-bs-toggle="tab" aria-selected="false">Şifrə</a>
+							</li>
+							<li class="nav-item">
+								<a href="#users" class="nav-link" data-bs-toggle="tab" aria-selected="false">İstifadəçilər</a>
+							</li>
+							<li class="nav-item">
+								<a href="#bank-accounts" class="nav-link" data-bs-toggle="tab" aria-selected="false">Bank hesabları</a>
+							</li>
+							<li class="nav-item">
+								<a href="#terms" class="nav-link" data-bs-toggle="tab" aria-selected="false">Məxfilik və şərtlər</a>
+							</li>
+						</ul>
+						<div class="dropdown__input dropdown__area d-md-none mt-2 order-last">
+							<div class="select__trigger">Biznes məlumatları</div>
+							<ul class="nav dropdown-menu__input options">
+								<li>
+									<span class="dropdown-item__input" data-bs-toggle="tab" data-bs-target="#business-info" aria-selected="true">Biznes məlumatları</span>
+								</li>
+								<li>
+									<span class="dropdown-item__input" data-bs-toggle="tab" data-bs-target="#account-set" aria-selected="false">Hesab ayarları</span>
+								</li>
+								<li>
+									<span class="dropdown-item__input" data-bs-toggle="tab" data-bs-target="#pass" aria-selected="false">Şifrə</span>
+								</li>
+								<li>
+									<span class="dropdown-item__input" data-bs-toggle="tab" data-bs-target="#users" aria-selected="false">İstifadəçilər</span>
+								</li>
+								<li>
+									<span class="dropdown-item__input" data-bs-toggle="tab" data-bs-target="#bank-accounts" aria-selected="false">Bank hesabları</span>
+								</li>
+								<li>
+									<span class="dropdown-item__input" data-bs-toggle="tab" data-bs-target="#terms" aria-selected="false">Məxfilik və şərtlər</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-content mt-5">
+					<div class="tab-pane active" id="business-info" role="tabpanel">
+						<div class="row">
+							<div class="col-md-6 mx-auto">
+								<form method="post" action="">
+									<div class="mb-3">
+										<label class="form-label">Biznesin adı</label>
+										<input type="text" name="" class="form-control" value="{{qeydiyyatı tamamlada yazılan}}">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Biznesin VÖEN-i</label>
+										<input type="text" name="" class="form-control" value="{{qeydiyyatı tamamlada yazılan}}">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Fəaliyyət sahəsi</label>
+										<div class="dropdown__input dropdown__area">
+											<div class="select__trigger">Ticarət</div>
+											<ul class="dropdown-menu__input options">
+												<li>
+													<span class="dropdown-item__input">Ticarət</span>
+												</li>
+												<li>
+													<span class="dropdown-item__input">İctimai iaşə</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="form-footer">
+										<button class="btn btn-primary">Yadda saxla</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="account-set" role="tabpanel">
+						<div class="row">
+							<div class="col-md-6 mx-auto">
+								<form method="post" action="">
+									<div class="mb-3">
+										<label class="form-label">Ad və soyad</label>
+										<input type="text" name="" class="form-control" value="{{qeydiyyatı tamamlada yazılan}}">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Email ünvanı</label>
+										<input type="email" name="" class="form-control" value="{{qeydiyyatı tamamlada yazılan}}">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Mobil nömrə</label>
+										<div class="position-relative">
+											<input type="text" name="" class="form-control pl-60">
+											<div class="position-absolute" style="top: 8px;left: 15px;">
+												+994
+											</div>
+										</div>
+									</div>
+									<div class="form-footer">
+										<button class="btn btn-primary">Yadda saxla</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="pass" role="tabpanel">
+						<div class="row">
+							<div class="col-md-6 mx-auto">
+								<form method="post" action="">
+									<div class="mb-3">
+										<label class="form-label">Cari şifrə</label>
+										<div class="position-relative">
+									  		<input type="password" name="password" class="form-control password">
+										    <div onclick="showPassword(this)">
+										    	<img src="assets/images/icons/eye.svg" class="position-absolute top-50 end-0 translate-middle" id="togglePassword">
+										    </div>
+									  	</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Yeni şifrə</label>
+										<div class="position-relative">
+									  		<input type="password" name="password" class="form-control password">
+										    <div onclick="showPassword(this)">
+										    	<img src="assets/images/icons/eye.svg" class="position-absolute top-50 end-0 translate-middle" id="togglePassword">
+										    </div>
+									  	</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Yeni şifrənin təkrarı</label>
+										<div class="position-relative">
+									  		<input type="password" name="password" class="form-control password">
+										    <div onclick="showPassword(this)">
+										    	<img src="assets/images/icons/eye.svg" class="position-absolute top-50 end-0 translate-middle" id="togglePassword">
+										    </div>
+									  	</div>
+									</div>
+									<div class="form-footer">
+										<button class="btn btn-primary">Şifrəni yenilə</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="users" role="tabpanel">
+						<div class="row">
+							<div class="col-md-9 mx-auto">
+								<div class="table-responsive-lg">
+									<table class="table table-sm">
+										<thead>
+											<tr>
+												<td scope="col">NÖV</td>
+												<td scope="col">AD</td>
+												<td scope="col">EMAİL</td>
+												<td scope="col" class="text-end"></td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td> 
+													<span class="badge bg-primary">Hesab sahibi</span>
+												</td>
+												<td>Fuad Əliyev</td>
+												<td>aliyev.fuad.99@gmail.com</td>
+												<td class="text-end"></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="badge bg-info">Admin</span>
+												</td>
+												<td>İsmayılbəy Qutqaşınl...</td>
+												<td>ismayılbeyqutashinli1234@gmail...</td>
+												<td class="text-end">
+													<button class="btn shadow-none dropdown-toggle px-1 py-0" data-bs-toggle="dropdown">
+														<img src="assets/images/icons/more.svg">
+													</button>
+													<ul class="dropdown-menu dropdown-menu-end">
+														<li>
+															<a href="#edit-user" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+														</li>
+														<li>
+															<a href="#delete-user" class="dropdown-item text-danger" data-bs-toggle="modal">İstifadəçini sil</a>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="badge bg-secondary">Əməliyyatçı</span>
+												</td>
+												<td>Rza Rzayev</td>
+												<td>hello@gmail.com</td>
+												<td class="text-end">
+													<button class="btn shadow-none dropdown-toggle px-1 py-0" data-bs-toggle="dropdown">
+														<img src="assets/images/icons/more.svg">
+													</button>
+													<ul class="dropdown-menu dropdown-menu-end">
+														<li>
+															<a href="#edit-user" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+														</li>
+														<li>
+															<a href="#delete-user" class="dropdown-item text-danger" data-bs-toggle="modal">İstifadəçini sil</a>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span class="badge bg-secondary opacity-6">Əməliyyatçı</span>
+												</td>
+												<td>Rza Rzayev</td>
+												<td>support@maliapp.az</td>
+												<td class="text-end">
+													<button class="btn shadow-none dropdown-toggle px-1 py-0" data-bs-toggle="dropdown">
+														<img src="assets/images/icons/more.svg">
+													</button>
+													<ul class="dropdown-menu dropdown-menu-end">
+														<li>
+															<a href="#edit-user" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+														</li>
+														<li>
+															<a href="#delete-user" class="dropdown-item text-danger" data-bs-toggle="modal">İstifadəçini sil</a>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="form-footer">
+									<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-user">
+										<img src="assets/images/icons/plus.svg">
+										<span class="ms-1 text-white">İstifadəçi əlavə et</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="bank-accounts" role="tabpanel">
+						<div class="row">
+							<div class="col-md-6 mx-auto">
+								<form method="post" action="">
+									<div class="mb-3">
+										<label class="form-label">Hesabın adı</label>
+										<input type="text" name="" class="form-control" value="{{qeydiyyatda yazılan}}">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Hesaba bağlı VÖEN</label>
+										<input type="text" name="" class="form-control" value="{{qeydiyyatda yazılan}}">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Hesabın valyutası</label>
+										<div class="dropdown__input dropdown__area">
+											<div class="select__trigger">AZN</div>
+											<ul class="dropdown-menu__input options">
+												<li>
+													<span class="dropdown-item__input">AZN</span>
+												</li>
+												<li>
+													<span class="dropdown-item__input">USD</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Hesablaşma hesabı</label>
+										<input type="text" name="" class="form-control" value="{{qeydiyyatda yazılan}}">
+									</div>
+									<div class="form-footer">
+										<button class="btn btn-primary">Yadda saxla</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="terms" role="tabpanel">
+						<div class="row">
+							<div class="col-md-7 mx-auto">
+								<div class="terms">
+									<h2 class="mb-3">MƏXFİLİK SİYASƏTİ</h2>
+									<p>Fərdi məlumatlar haqqında bu Məxfilik Siyasəti (bundan sonra "Məxfilik Siyasəti"), www.onpay.az domenində yerləşən OnPay veb saytının (bundan sonra “Maliapp”) istifadəçisinin sayt və xidmətlərdən istifadə edərkən toplanan fərdi məlumatları ilə əlaqədardır.<br>
+									Fərdi məlumatlar haqqında bu Məxfilik Siyasəti (bundan sonra "Məxfilik Siyasəti"), www.onpay.az domenində yerləşən OnPay veb saytının (bundan sonra “Maliapp”) istifadəçisinin sayt və xidmətlərdən istifadə edərkən toplanan fərdi məlumatları ilə əlaqədardır.<br>
+									Fərdi məlumatlar haqqında bu Məxfilik Siyasəti (bundan sonra "Məxfilik Siyasəti"), www.onpay.az domenində yerləşən OnPay veb saytının (bundan sonra “Maliapp”) istifadəçisinin sayt və xidmətlərdən istifadə edərkən toplanan fərdi məlumatları ilə əlaqədardır.<br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal fade" id="add-user" tabindex="-1" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h2 class="modal-title">İstifadəçi əlavə et</h2>
+								</div>
+								<div class="modal-body mt-3">
+									<form method="post" action="">
+										<div class="mb-3">
+											<label for="user_name" class="form-label">Ad</label>
+											<input type="text" id="user_name" class="form-control" name="">
+										</div>
+										<div class="mb-3">
+											<label for="user_email" class="form-label">Email</label>
+											<input type="text" id="user_email" class="form-control" name="">
+										</div>
+										<p class="mb-2">Növ</p>
+										<div class="mb-2 form-check align-items-center">
+											<input type="radio" name="access" id="admin" class="form-check-input" checked>
+											<label for="admin" class="form-check-label d-flex">
+												<p>Admin</p>
+												<span class="font-13 ms-2">Bütün funskiyalara çıxış</span>
+											</label>
+										</div>
+										<div class="mb-3 form-check align-items-center">
+											<input type="radio" name="access" id="emeliyyatci" class="form-check-input">
+											<label for="emeliyyatci" class="form-check-label d-flex">
+												<p>Əməliyyatçı</p>
+												<span class="font-13 ms-2">Yalnız əməliyyat icra etmək</span>
+											</label>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+							        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+							        <button type="submit" class="btn btn-primary">Əlavə et</button>
+						        </div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal fade" id="edit-user" tabindex="-1" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h2 class="modal-title">İstifadəçiyə düzəliş et</h2>
+								</div>
+								<div class="modal-body mt-3">
+									<form method="post" action="">
+										<div class="mb-3">
+											<label for="user_name" class="form-label">Ad</label>
+											<input type="text" id="user_name" class="form-control" name="">
+										</div>
+										<div class="mb-3">
+											<label for="user_email" class="form-label">Email</label>
+											<input type="text" id="user_email" class="form-control" name="">
+										</div>
+										<p class="mb-2">Növ</p>
+										<div class="mb-2 form-check align-items-center">
+											<input type="radio" name="access" id="admin" class="form-check-input" checked>
+											<label for="admin" class="form-check-label d-flex">
+												<p>Admin</p>
+												<span class="font-13 ms-2">Bütün funskiyalara çıxış</span>
+											</label>
+										</div>
+										<div class="mb-3 form-check align-items-center">
+											<input type="radio" name="access" id="emeliyyatci" class="form-check-input">
+											<label for="emeliyyatci" class="form-check-label d-flex">
+												<p>Əməliyyatçı</p>
+												<span class="font-13 ms-2">Yalnız əməliyyat icra etmək</span>
+											</label>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+							        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+							        <button type="submit" class="btn btn-primary">Düzəliş et</button>
+						        </div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal fade" id="delete-user" tabindex="-1" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h2 class="modal-title">İstifadəçini sil</h2>
+								</div>
+								<div class="modal-body mt-3">
+									<p class="text-muted">İstifadəçini silmək istədiyinə əminsən?</p>
+								</div>
+								<div class="modal-footer">
+							        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+							        <button type="submit" class="btn btn-danger">Sil</button>
+						        </div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="assets/plugins/splidejs/dist/js/splide.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

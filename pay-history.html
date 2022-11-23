@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Əməliyyat tarixçəsi - Birkassa</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+
+<div id="layout-wrapper">
+	<header id="page-topbar">
+		<div class="navbar-area border-bottom">
+			<div class="container">
+				<div class="just-between-center">
+					<h1>Əməliyyat tarixçəsi</h1>
+					<div class="d-md-block d-none">
+						<button class="btn btn-outline-secondary h-100 dropdown-toggle me-3" id="drop">
+							<img src="assets/images/icons/filter.svg">
+							<span>Arıtla</span>
+						</button>
+						<button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#excel">
+							<img src="assets/images/icons/download.svg">
+							<span>Excel yüklə</span>
+						</button>
+					</div>
+					<button type="button" class="btn-close text-reset d-md-none">
+						<a href="invoices.html"><img src="assets/images/icons/close-sm.svg"></a>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="main-page">
+		<div class="container">
+			<div class="row g-0">
+				<div class="full-page-content pay-history">
+					<div class="col-md-12 col-lg-10 mx-auto">
+						<div class="table-responsive-lg mt-2">
+							<table class="table table-sm">
+								<thead class="border-top">
+									<tr>
+										<td scope="col">DURUM</td>
+										<td scope="col">MƏNBƏƏ</td>
+										<td scope="col">ÖDƏNİŞ TARİXİ</td>
+										<td scope="col" class="special_column">MÜŞTƏRİ</td>
+										<td scope="col">MƏBLƏĞ</td>
+										<td scope="col" class="text-end"></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<span class="badge bg-primary">Ödənilmiş</span>
+										</td>
+										<td>HF1255</td>
+										<td>11.11.2021</td>
+										<td>Fuad Əliyev</td>
+										<td>+123.45 ₼</td>
+										<td class="text-end">
+											<button class="btn shadow-none dropdown-toggle px-1 py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="badge bg-primary">Ödənilmiş</span>
+										</td>
+										<td>HF1255</td>
+										<td>11.11.2021</td>
+										<td>Fuad Əliyev</td>
+										<td>+123.45 ₼</td>
+										<td class="text-end">
+											<button class="btn shadow-none dropdown-toggle px-1 py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="badge bg-secondary">İcra olunur</span>
+										</td>
+										<td>Balansdan çəkmə</td>
+										<td>11.11.2021</td>
+										<td>-</td>
+										<td>-2,000.00 ₼</td>
+										<td class="text-end">
+											<button class="btn shadow-none dropdown-toggle px-1 py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="badge bg-danger">Geri ödənilmiş</span>
+										</td>
+										<td>maliapp</td>
+										<td>11.11.2021</td>
+										<td>Müştəri 1</td>
+										<td>-45.50 ₼</td>
+										<td class="text-end">
+											<button class="btn shadow-none dropdown-toggle px-1 py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

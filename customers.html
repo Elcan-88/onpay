@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Müştərilər - Birkassa</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/splide.min.css">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/splide-core.min.css">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/themes/splide-default.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+
+<div id="layout-wrapper">
+	<header id="page-topbar">
+		<div class="navbar-header">
+			<div class="d-flex">
+				<div class="navbar-brand-box">
+					<img src="assets/images/logo/onpay-logo.png" class="logo">
+				</div>
+			</div>
+			<div class="d-flex">
+				<div class="dropdown ms-2">
+					<button type="button" class="btn header-item noti-icon position-relative" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img src="assets/images/icons/bell.svg">
+						<span class="badge translate-middle bg-danger rounded-circle">
+							<span class="visually-hidden">New alerts</span>
+						</span>
+					</button>
+				</div>
+				<div class="dropdown ms-3 just-center">
+					<button type="button" class="btn d-none d-lg-flex header-item align-items-center" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="profile">FA</div>
+						<p class="me-3">Fuad Əliyev</p>
+						<img src="assets/images/icons/arrow-bottom.svg">
+					</button>
+					<input type="checkbox" name="" id="menu" class="checkbox">
+					<label for="menu" onclick="toggleMenu()">
+						<img src="assets/images/icons/hamburger-menu.svg" class="d-lg-none hamburger-menu">
+						<button type="button" class="btn-close text-reset close-menu d-none" aria-label="Close">
+							<img src="assets/images/icons/close-sm.svg">
+						</button>
+					</label>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- ==== LEFT SIDEBAR START ====  -->
+	<div class="vertical-menu d-none d-lg-block">
+		<div id="sidebar-menu">
+			<ul class="list-unstyled" id="side-menu">
+				<li>
+					<a href="">
+						<img src="assets/images/icons/analytics_black_24dp.svg">
+						<p>İdarə paneli</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/integration_instructions_black_24dp.svg">
+						<p>Vebsaytlar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/receipt_black_24dp.svg">
+						<p>Fakturalar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/repeat_black_24dp.svg">
+						<p>Təkrarlanan fakturalar</p>
+					</a>
+				</li>
+				<li class="menu-active">
+					<a href="">
+						<img src="assets/images/icons/customer.svg">
+						<p>Müştərilər</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ==== LEFT SIDEBAR END ====  -->
+
+	<!-- ==== MOBILE MENU ==== -->
+	<div class="mobile-menu d-lg-none">
+		<div class="mobile-navbar">
+			<div class="container">
+				<div class="position-relative">
+					<div class="dropdown">
+						<button class="btn shadow-none border w-100 bg-default just-between-center dropdown-toggle px-3 py-2" data-bs-toggle="dropdown">
+							<div class="just-center">
+								<div class="profile">FA</div>
+								<p class="me-3">Fuad Əliyev</p>
+							</div>
+							<img src="assets/images/icons/arrow-bottom_large.svg">
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a href="#" class="dropdown-item text-danger">Hesabdan çıxış</a>
+							</li>
+						</ul>
+					</div>
+					<div class="horizontal-menu mt-5">
+						<div id="sidebar-menu">
+							<ul class="list-unstyled" id="side-menu">
+								<li>
+									<a href="">
+										<img src="assets/images/icons/analytics_black_24dp.svg">
+										<p>Analitika</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/integration_instructions_black_24dp.svg">
+										<p>İnteqrasiyalar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/repeat_black_24dp.svg">
+										<p>Təkrarlanan fakturalar</p>
+									</a>
+								</li>
+								<li class="menu-active">
+									<a href="">
+										<img src="assets/images/icons/receipt_black_24dp.svg">
+										<p>Fakturalar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/account_balance_wallet_black_24dp.svg">
+										<p>Balans</p>
+									</a>
+								</li>
+							</ul>
+
+							<ul class="list-unstyled border-top mt-60 pt-2">
+								<li>
+									<a href="">
+										<img src="assets/images/icons/settings.svg">
+										<p>Ayarlar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/help_outline_black_24dp.svg">
+										<p>Dəstək</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ==== END MOBILE MENU ==== -->
+
+	<div class="main-content">
+		<div class="page-content">
+			<div class="container">
+				<!-- <div class="just-between flex-lg-row flex-column align-items-start">
+					<h1 class="mb-2">Müştərilər</h1>
+					<div class="d-flex">
+						<div class="position-relative dropdown__area">
+							<button class="btn btn-outline-secondary select__trigger h-100 dropdown-toggle">
+								<img src="assets/images/icons/filter.svg">
+								<span>Arıtla</span>
+							</button>
+							<div class="filter dropdown-menu__input dropdown-filter">
+								<p class="text-muted text-start">DURUMLAR</p>
+								<ul class="list-unstyled text-start">
+									<li>
+										<div class="form-check mt-2">
+											<input type="checkbox" class="form-check-input" id="paid-check" name="durumlar" checked>
+											<label class="form-check-label" for="paid-check">Ödənilmişlər</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check mt-2">
+											<input type="checkbox" class="form-check-input" id="unpaid-check" name="durumlar">
+											<label class="form-check-label" for="unpaid-check">Ödənilməmişlər</label>
+										</div>
+									</li>
+									<li>
+										<div class="form-check mt-2">
+											<input type="checkbox" class="form-check-input" id="trash-check" name="durumlar">
+											<label class="form-check-label" for="trash-check">Qaralamalar</label>
+										</div>
+									</li>
+								</ul>
+								<p class="text-muted text-start">TARİX ARALIĞI</p>
+								<div class="date-range mt-2">
+									<div class="form-check text-start">
+										<input type="radio" name="date_range" id="today-filt" class="form-check-input">
+										<label for="today-filt" class="form-check-label">
+											<span>Bugün</span>
+											<span>25.02.2022</span>
+										</label>
+									</div>
+									<div class="form-check text-start">
+										<input type="radio" name="date_range" id="month-filt" class="form-check-input">
+										<label for="month-filt" class="form-check-label">
+											<span>Cari ay</span>
+											<span>01.02.2022 - 25.02.2022</span>
+										</label>
+									</div>
+									<div class="form-check text-start">
+										<input type="radio" name="date_range" id="seven-day-filt" class="form-check-input">
+										<label for="seven-day-filt" class="form-check-label">
+											<span>Son 7 gün</span>
+											<span>18.02.2022 - 25.02.2022</span>
+										</label>
+									</div>
+									<div class="form-check text-start">
+										<input type="radio" name="date_range" id="last-month-filt" class="form-check-input">
+										<label for="last-month-filt" class="form-check-label">
+											<span>Keçən ay</span>
+											<span>01.01.2022 - 31.01.2022</span>
+										</label>
+									</div>
+									<div class="form-check text-start">
+										<input type="radio" name="date_range" id="other-filt" class="form-check-input other-choice">
+										<label for="other-filt" class="form-check-label d-flex">
+											<span>Digər</span>
+											<div class="other-input d-flex">
+												<input type="text" name="" class="form-control-sm"> 
+												<div class="mx-1 mt-1">-</div>
+												<input type="text" name="" class="form-control-sm">
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-outline-secondary ms-3">
+							<img src="assets/images/icons/download.svg">
+							<span>Excel yüklə</span>
+						</button>
+						<a href="#add-customer" class="btn btn-primary ms-3" data-bs-toggle="modal">
+							<img src="assets/images/icons/plus.svg">
+							<span class="ms-1 text-white">Müştəri yarat</span>
+						</a>
+					</div>
+				</div> -->
+				<div class="border-bottom mt-4 pb-2">
+					<div class="d-flex justify-content-between">
+						<ul class="nav nav-tabs-custom card-header-tabs" id="pills-tab" role="tablist">
+							<li class="nav-item">
+								<a href="#from-invoice" class="nav-link active" data-bs-toggle="tab" aria-selected="true">Fakturalardan</a>
+							</li>
+							<li class="nav-item">
+								<a href="#from-website" class="nav-link" data-bs-toggle="tab" aria-selected="false">Vebsaytlardan</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="from-invoice" role="tabpanel">
+						<div class="table-responsive-lg mt-2" style="overflow: auto;height: 320px;">
+							<table class="table table-sm" style="position:relative;">
+								<thead style="position: sticky;top: 0;z-index: 100;background: #F7F7FA;">
+									<tr>
+										<td scope="col">AD</td>
+										<td scope="col">EMAIL</td>
+										<td scope="col" class="special_column">MOBİL NÖMRƏ</td>
+										<td scope="col">YARANMA TARİXİ</td>
+										<td scope="col"></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>İsmayılbəy Qutqaşınl...</td>
+										<td>ismayılbeyqutashinli1234@gmail...</td>
+										<td>-</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="#" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>Fuad Əliyev</td>
+										<td>aliyev.fuad.99@gmail.com</td>
+										<td>+994515100051</td>
+										<td>02.01.2022</td>
+										<td>
+											<button class="btn shadow-none dropdown-toggle py-0" data-bs-toggle="dropdown">
+												<img src="assets/images/icons/more.svg">
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li>
+													<a href="customer-details.html" class="dropdown-item">Baxış</a>
+												</li>
+												<li>
+													<a href="#edit-customer" class="dropdown-item" data-bs-toggle="modal">Düzəliş et</a>
+												</li>
+												<li>
+													<a href="#delete-customer"  data-bs-toggle="modal" class="dropdown-item text-danger">Müştərini sil</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- Add Customer Modal -->
+							<div class="modal fade" id="add-customer" tabindex="-1" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h2 class="modal-title">Müştəri yarat</h2>
+										</div>
+										<div class="modal-body mt-3">
+											<form method="post" action="">
+												<div class="mb-3">
+													<label for="ad" class="form-label">Ad</label>
+													<input type="text" id="ad" class="form-control" name="">
+												</div>
+												<div class="mb-3">
+													<label for="email" class="form-label">Email</label>
+													<input type="email" id="email" class="form-control" name="">
+												</div>
+												<div class="mb-3">
+													<label for="number" class="form-label">Mobil nömrə <span class="text-muted">(məcburi deyil)</span></label>
+													<div class="position-relative">
+														<input type="text" id="number" name="" class="form-control pl-60">
+														<div class="position-absolute" style="top: 8px;left: 15px;">
+															+994
+														</div>
+													</div>
+												</div>
+												<div class="mb-3">
+													<label for="note" class="form-label">Qeyd <span class="text-muted">(məcburi deyil)</span></label>
+													<input type="text" id="note" class="form-control" name="">
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+									        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+									        <button type="button" class="btn btn-primary">Yarat</button>
+								        </div>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- Edit Customer Modal  -->
+							<div class="modal fade" id="edit-customer" tabindex="-1" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h2 class="modal-title">Müştəriyə düzəliş et</h2>
+										</div>
+										<div class="modal-body mt-3">
+											<form method="post" action="">
+												<div class="mb-3">
+													<label for="ad" class="form-label">Ad</label>
+													<input type="text" id="ad" class="form-control" name="" value="Fuad Əliyev">
+												</div>
+												<div class="mb-3">
+													<label for="email" class="form-label">Email</label>
+													<input type="email" id="email" class="form-control" name="" value="fuad.aliyev.99@gmail.com">
+												</div>
+												<div class="mb-3">
+													<label for="number" class="form-label">Mobil nömrə <span class="text-muted">(məcburi deyil)</span></label>
+													<div class="position-relative">
+														<input type="text" id="number" name="" class="form-control pl-60" value="515100051">
+														<div class="position-absolute" style="top: 8px;left: 15px;">
+															+994
+														</div>
+													</div>
+												</div>
+												<div class="mb-3">
+													<label for="note" class="form-label">Qeyd <span class="text-muted">(məcburi deyil)</span></label>
+													<input type="text" id="note" class="form-control" name="">
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+									        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+									        <button type="button" class="btn btn-primary">Düzəliş et</button>
+								        </div>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- === Delete Customer Modal === -->
+							<div class="modal fade" id="delete-customer" tabindex="-1" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h2 class="modal-title">Müştərini sil</h2>
+							      </div>
+							      <div class="modal-body mt-3">
+							        <p class="text-muted">Müştərini silmək istədiyinə əminsən? Müştəri birdəfəlik silinəcək və aktiv təkrarlanan fakturalar dayandırılacaq</p>
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+							        <button type="button" class="btn btn-danger">Ləğv et</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="tab-pane" id="from-website" role="tabpanel">
+						 <div class="table-responsive-lg mt-2">
+							<table class="table table-sm">
+								<thead>
+									<tr>
+										<td scope="col">AD</td>
+										<td scope="col">EMAIL</td>
+										<td scope="col" class="special_column">MOBİL NÖMRƏ</td>
+										<td scope="col">YARANMA TARİXİ</td>
+										<td scope="col"></td>
+									</tr>
+								</thead>
+							</table>
+
+							<div class="no-data">
+								<div class="d-flex flex-column align-items-start">
+									<img src="assets/images/icons/customer-light.svg" class="icon">
+									<h2>İlk müştərini yarat</h2>
+									<p class="text-muted mb-2">Müştəri yarat və ona birdəfəlik və ya təkrarlanan<br> fakturalar göndər</p>
+									<a href="#">Ətraflı</a>
+									<a href="#add-customer" class="btn btn-primary mt-3" data-bs-toggle="modal">
+										<img src="assets/images/icons/plus.svg">
+										<span class="ms-1 text-white">Müştəri yarat</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="assets/plugins/splidejs/dist/js/splide.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

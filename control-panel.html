@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>İdarə paneli - Birkassa</title>
+	<link rel="shortcut icon" href="assets/images/logo/favicon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/splide.min.css">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/themes/splide-default.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+
+<div id="layout-wrapper">
+	<header id="page-topbar">
+		<div class="navbar-header">
+			<div class="d-flex">
+				<div class="navbar-brand-box">
+					<img src="assets/images/logo/onpay-logo.png" class="logo">
+				</div>
+			</div>
+			<div class="d-flex">
+				<div class="dropdown ms-2">
+					<button type="button" class="btn header-item noti-icon position-relative" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img src="assets/images/icons/bell.svg">
+						<span class="badge translate-middle bg-danger rounded-circle">
+							<span class="visually-hidden">New alerts</span>
+						</span>
+					</button>
+				</div>
+				<div class="dropdown ms-3 just-center">
+					<button type="button" class="btn d-none d-lg-flex header-item align-items-center" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="profile">FA</div>
+						<p class="me-3">Fuad Əliyev</p>
+						<img src="assets/images/icons/arrow-bottom.svg">
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end profile__dropdown">
+						<li>
+							<a href="settings.html" class="dropdown-item">Ayarlar</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-item text-danger">Hesabdan çıxış</a>
+						</li>
+					</ul>
+					<input type="checkbox" name="" id="menu" class="checkbox">
+					<label for="menu" onclick="toggleMenu()">
+						<img src="assets/images/icons/hamburger-menu.svg" class="d-lg-none hamburger-menu">
+						<button type="button" class="btn-close text-reset close-menu d-none" aria-label="Close">
+							<img src="assets/images/icons/close-sm.svg">
+						</button>
+					</label>
+
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- ==== LEFT SIDEBAR START ====  -->
+	<div class="vertical-menu d-none d-lg-block">
+		<div id="sidebar-menu">
+			<ul class="list-unstyled" id="side-menu">
+				<li class="menu-active">
+					<a href="">
+						<img src="assets/images/icons/analytics_black_24dp.svg">
+						<p>İdarə paneli</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/integration_instructions_black_24dp.svg">
+						<p>İnteqrasiyalar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/repeat_black_24dp.svg">
+						<p>Təkrarlanan fakturalar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/receipt_black_24dp.svg">
+						<p>Fakturalar</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="assets/images/icons/account_balance_wallet_black_24dp.svg">
+						<p>Balans</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ==== LEFT SIDEBAR END ====  -->
+
+	<!-- ==== MOBILE MENU ==== -->
+	<div class="mobile-menu d-lg-none">
+		<div class="mobile-navbar">
+			<div class="container">
+				<div class="position-relative">
+					<div class="dropdown">
+						<button class="btn shadow-none border w-100 bg-default just-between-center dropdown-toggle px-3 py-2" data-bs-toggle="dropdown">
+							<div class="just-center">
+								<div class="profile">FA</div>
+								<p class="me-3">Fuad Əliyev</p>
+							</div>
+							<img src="assets/images/icons/arrow-bottom_large.svg">
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a href="#" class="dropdown-item text-danger">Hesabdan çıxış</a>
+							</li>
+						</ul>
+					</div>
+					<div class="horizontal-menu mt-5">
+						<div id="sidebar-menu">
+							<ul class="list-unstyled" id="side-menu">
+								<li class="menu-active">
+									<a href="">
+										<img src="assets/images/icons/analytics_black_24dp.svg">
+										<p>İdarə paneli</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/integration_instructions_black_24dp.svg">
+										<p>İnteqrasiyalar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/repeat_black_24dp.svg">
+										<p>Təkrarlanan fakturalar</p>
+									</a>
+								</li>
+								<li class="menu-active">
+									<a href="">
+										<img src="assets/images/icons/receipt_black_24dp.svg">
+										<p>Fakturalar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/account_balance_wallet_black_24dp.svg">
+										<p>Balans</p>
+									</a>
+								</li>
+							</ul>
+
+							<ul class="list-unstyled border-top mt-60 pt-2">
+								<li>
+									<a href="">
+										<img src="assets/images/icons/settings.svg">
+										<p>Ayarlar</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="assets/images/icons/help_outline_black_24dp.svg">
+										<p>Dəstək</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ==== END MOBILE MENU ==== -->
+
+	<div class="main-content">
+		<div class="page-content">
+			<div class="container">
+
+				<div class="just-between flex-lg-row flex-column align-items-start">
+					<h1 class="mb-2">İdarə paneli</h1>
+				</div>
+
+				<div class="splide mt-3 d-md-none">
+				  <div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<div class="income-card card-white">
+									<div>
+										<p class="text-muted mb-1">Aylıq gəlirlər</p>
+										<h2 class="d-inline">23,148.00 ₼</h2>
+										<p class="text-main">+10.33%</p>
+									</div>
+								</div>
+							</li>
+							<li class="splide__slide">
+								<div class="income-card card-white">
+									<div>
+										<p class="text-muted mb-1">Aylıq gəlirlər</p>
+										<h2 class="d-inline">23,148.00 ₼</h2>
+										<p class="text-danger">-13.92%</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+				  </div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col-md-7">
+						<div class="row row-cols-2 control-panel__cards d-none d-md-flex">
+							<div class="col">
+								<div class="income-card card-white">
+									<div>
+										<p class="text-muted mb-1">Aylıq gəlirlər</p>
+										<h2 class="d-inline me-3">23,148.00 ₼</h2>
+										<p class="text-main">+10.33%</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="income-card card-white">
+									<div>
+										<p class="text-muted mb-1">Günlük gəlirlər</p>
+										<h2 class="d-inline">23,148.00 ₼</h2>
+										<p class="text-danger">-13.92%</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="card-white">
+									<div class="just-between-center mb-3">
+										<h2>Gəlirlər</h2>
+										<div class="position-relative dropdown__area">
+											<button class="btn btn-outline-secondary select__trigger h-100 dropdown-toggle" id="drop">
+												<img src="assets/images/icons/filter.svg">
+												<span>Aylıq</span>
+											</button>
+											<div class="filter dropdown-menu__input dropdown-filter">
+												<div class="date-range mt-2">
+													<div class="form-check text-start">
+														<input type="radio" name="date_range" id="today-filt" class="form-check-input">
+														<label for="today-filt" class="form-check-label">
+															<span>Bugün</span>
+															<span>25.02.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range" id="month-filt" class="form-check-input">
+														<label for="month-filt" class="form-check-label">
+															<span>Cari ay</span>
+															<span>01.02.2022 - 25.02.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range" id="seven-day-filt" class="form-check-input">
+														<label for="seven-day-filt" class="form-check-label">
+															<span>Son 7 gün</span>
+															<span>18.02.2022 - 25.02.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range" id="last-month-filt" class="form-check-input">
+														<label for="last-month-filt" class="form-check-label">
+															<span>Keçən ay</span>
+															<span>01.01.2022 - 31.01.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range" id="other-filt" class="form-check-input other-choice">
+														<label for="other-filt" class="form-check-label d-flex">
+															<span>Digər</span>
+															<div class="other-input d-flex">
+																<input type="text" name="" class="form-control-sm"> 
+																<div class="mx-1 mt-1">-</div>
+																<input type="text" name="" class="form-control-sm">
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<canvas id="lineChart"></canvas>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="card-white">
+									<div class="just-between mb-3">
+										<h2>Müştərilər</h2>
+										<div class="position-relative dropdown__area">
+											<button class="btn btn-outline-secondary select__trigger h-100 dropdown-toggle" id="drop">
+												<img src="assets/images/icons/filter.svg">
+												<span>Aylıq</span>
+											</button>
+											<div class="filter dropdown-menu__input dropdown-filter">
+												<div class="date-range mt-2">
+													<div class="form-check text-start">
+														<input type="radio" name="date_range2" id="today-filt2" class="form-check-input">
+														<label for="today-filt2" class="form-check-label">
+															<span>Bugün</span>
+															<span>25.02.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range2" id="month-filt2" class="form-check-input">
+														<label for="month-filt2" class="form-check-label">
+															<span>Cari ay</span>
+															<span>01.02.2022 - 25.02.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range2" id="seven-day-filt2" class="form-check-input">
+														<label for="seven-day-filt2" class="form-check-label">
+															<span>Son 7 gün</span>
+															<span>18.02.2022 - 25.02.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range2" id="last-month-filt2" class="form-check-input">
+														<label for="last-month-filt2" class="form-check-label">
+															<span>Keçən ay</span>
+															<span>01.01.2022 - 31.01.2022</span>
+														</label>
+													</div>
+													<div class="form-check text-start">
+														<input type="radio" name="date_range2" id="other-filt2" class="form-check-input other-choice">
+														<label for="other-filt2" class="form-check-label d-flex">
+															<span>Digər</span>
+															<div class="other-input d-flex">
+																<input type="text" name="" class="form-control-sm"> 
+																<div class="mx-1 mt-1">-</div>
+																<input type="text" name="" class="form-control-sm">
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 border-md-right">
+											<canvas id="doughnut"></canvas>
+										</div>
+										<div class="col-md-6">
+											<ul class="list-unstyled customer-list-chart">
+										  		<li>
+										  			<p>Müştəri no. 1</p>
+										  			<div>
+										  				<p>1,202.12</p>
+										  				<span>25.00%</span>
+										  			</div>
+										  		</li>
+										  		<li>
+										  			<p>Müştəri no. 2</p>
+										  			<div>
+										  				<p>1,202.12</p>
+										  				<span>25.00%</span>
+										  			</div>
+										  		</li>
+										  		<li>
+										  			<p>Müştəri no. 3</p>
+										  			<div>
+										  				<p>1,202.12</p>
+										  				<span>25.00%</span>
+										  			</div>
+										  		</li>
+										  		<li>
+										  			<p>Müştəri no. 4</p>
+										  			<div>
+										  				<p>1,202.12</p>
+										  				<span>25.00%</span>
+										  			</div>
+										  		</li>
+										  	</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-5">
+						<div class="card-white px-xxl-5">
+							<h2>Balans</h2>
+							<div class="card-balance">
+								<div class="just-between">
+									<div>
+										<p class="text-muted">Cari balans</p>
+										<h2>23,148.00 ₼</h2>
+										<span class="badge bg-primary">+123.23 ₼</span>
+										<span class="badge bg-danger">-0.00 ₼</span>
+									</div>
+									<div class="icon bg-white">
+										
+									</div>
+								</div>
+							</div>
+							<div class="mt-3">
+								<button class="btn btn-outline-secondary mb-2" data-bs-toggle="modal" data-bs-target="#pull-of-balance">
+									<img src="assets/images/icons/card-balance.svg">
+									<span>Balansdan çək</span>
+								</button>
+								<button class="btn btn-outline-secondary mb-2" data-bs-toggle="modal" data-bs-target="#increase-balance">
+									<img src="assets/images/icons/card-balance.svg">
+									<span>Balansı artır</span>
+								</button>
+							</div>
+							<div class="control-panel__payments">
+								<div class="just-between-center border-bottom pb-2">
+									<h2>Tarixçə</h2>
+									<a href="pay-history.html">Hamısına bax</a>
+								</div>
+								<ul class="list-unstyled payment-history">
+							  		<li>
+							  			<p>HF1255</p>
+							  			<p>+123.45 ₼</p>
+							  		</li>
+							  		<li>
+							  			<p>HF1231</p>
+							  			<p>+335.03 ₼</p>
+							  		</li>
+							  		<li>
+							  			<p>Balansdan çəkmə</p>
+							  			<p>-2,000.00 ₼</p>
+							  		</li>
+							  		<li>
+							  			<p>maliapp</p>
+							  			<p>+45.50 ₼</p>
+							  		</li>
+							  		<li>
+							  			<p>maliapp</p>
+							  			<p>+45.50 ₼</p>
+							  		</li>
+							  	</ul>
+							</div>
+
+							<div class="modal fade" id="pull-of-balance" tabindex="-1" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h2 class="modal-title">Balansdan çək</h2>
+										</div>
+										<div class="modal-body mt-3">
+											<p class="text-muted mb-3">Balansdan çəkilən məbləğ dərhal balansınızdan çıxacaq və növbəti 5 gün ərzində bank hesablnlza oturacaq.</p>
+
+											<form method="post" action="">
+												<label for="" class="form-label">Balansdan çəkiləcək məbləğ</label>
+												<div class="position-relative">
+			                                        <input type="text" id="card-number" name="" class="form-control pr-50" value="1,000">
+			                                        <div class="position-absolute" style="top: 8px;right: 20px;">
+			                                            ₼
+			                                        </div>
+			                                    </div>
+			                                    <p class="text-muted mt-1">Tutulacaq komissiya: 1.00₼ </p>
+											</form>
+										</div>
+										<div class="modal-footer">
+									        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+									        <button type="button" class="btn btn-primary">Balansdan çək</button>
+								        </div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="increase-balance" tabindex="-1" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h2 class="modal-title">Balansı artır</h2>
+										</div>
+										<div class="modal-body mt-3">
+											<p class="text-muted mb-3">Balansa artırılan məbləğ dərhal balansınıza oturacaq.</p>
+
+											<form method="post" action="">
+												<label for="" class="form-label">Balansa artırılacaq məbləğ</label>
+												<div class="position-relative">
+			                                        <input type="text" id="card-number" name="" class="form-control pr-50" value="1,000">
+			                                        <div class="position-absolute" style="top: 8px;right: 20px;">
+			                                            ₼
+			                                        </div>
+			                                    </div>
+			                                    <p class="text-muted mt-1">Tutulacaq komissiya: {{2%}} </p>
+											</form>
+										</div>
+										<div class="modal-footer">
+									        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İmtina et</button>
+									        <button type="button" class="btn btn-primary">Balansı artır</button>
+								        </div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="assets/plugins/splidejs/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/chart.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

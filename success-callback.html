@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Success Callback - Birkassa</title>
+	<link rel="shortcut icon" href="assets/images/logo/favicon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/splide.min.css">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/splide-core.min.css">
+	<link rel="stylesheet" href="assets/plugins/splidejs/dist/css/themes/splide-default.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+
+<div class="auth-page">
+	<div class="container-md">
+		<div class="row login-page">
+			<div class="col-12 col-sm-10 col-md-8 col-xl-6 mx-auto">
+				<div class="auth-full-page-content">
+					<img src="assets/images/logo/onpay-logo.png" class="logo mb-3">
+					<div class="auth-area card-white">
+						<div class="header text-center mb-5">
+							<h2 class="mb-3 text-main">Ödəninişiniz icra olundu</h2>
+							<img src="assets/images/icons/pay-success.svg">
+						</div>
+						<p class="mb-3">Ödəniş məlumatları</p>
+						<ul class="list-unstyled pay-details">
+							<li>
+								<p class="text-muted">Ödənişin tarixi</p>
+								<p>{{Ödənişin tarixi}}</p>
+							</li>
+							<li>
+								<p class="text-muted">Ödənişin məbləği</p>
+								<p>{{Ödənişin məbləği}} ₼</p>
+							</li>
+							<li>
+								<p class="text-muted">Ödənişin nömrəsi</p>
+								<p>{{Payment slug}}</p>
+							</li>
+							<li>
+								<p class="text-muted">Adınız</p>
+								<p>{{customer name}}</p>
+							</li>
+							<li>
+								<p class="text-muted">Emailiniz</p>
+								<p>{{customer email}}</p>
+							</li>
+							<li>
+								<p class="text-muted">Mobil nömrəniz</p>
+								<p>{{customer number}}</p>
+							</li>
+							<li>
+								<p class="text-muted">Ünvanınız</p>
+								<p>{{customer address}}</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="assets/plugins/splidejs/dist/js/splide.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fakturalar - Birkassa</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+
+<div id="layout-wrapper">
+	<header id="page-topbar">
+		<div class="navbar-area border-bottom">
+			<div class="container">
+				<div class="just-between">
+					<h1>Qeydiyyatı tamamla</h1>
+					<div class="d-md-block d-none">
+						<a href="complete-step2.html" class="btn btn-outline-secondary">Əvvəlki addım</a>
+						<a href="invoices.html" class="btn btn-primary">Təsdiqlə</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="main-page">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-md-6 border-md-right order-2 order-md-first full-page-content">
+					<div class="row">
+						<div class="col-lg-9 col-md-10">
+							<form method="post" action="">
+								<div class="form-group">
+									<label for="account-name" class="mb-2"><h2>Hesabın adı</h2></label>
+									<input type="text" name="" id="account-name" class="form-control" value="Mənim bank hesabım">
+								</div>
+								<div class="form-group">
+									<label for="business-voen" class="mb-2"><h2>Hesaba bağlı VÖEN</h2></label>
+									<input type="text" name="" id="business-voen" class="form-control" value="{{biznesin vöeni}}">
+								</div>
+								<div class="form-group">
+									<label class="mb-2"><h2>Hesabın valyutası</h2></label>
+									<div class="dropdown__input dropdown__area">
+										<div class="select__trigger"></div>
+										<ul class="dropdown-menu__input options">
+											<li>
+												<span class="dropdown-item__input">AZN</span>
+											</li>
+											<li>
+												<span class="dropdown-item__input">USD</span>
+											</li>
+											<li>
+												<span class="dropdown-item__input">EUR</span>
+											</li>
+											<li>
+												<span class="dropdown-item__input">GBP</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="hesablasma"><h2>Hesablaşma hesabı</h2></label>
+									<input type="text" name="" id="hesablasma" class="form-control" value="1234567890098765432112345678">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 full-page-content">
+					<div class="d-md-none just-between">
+						<a href="complete-step1.html" class="btn btn-outline-secondary me-2">Əvvəlki addım</a>
+						<a href="complete-step3.html" class="btn btn-primary">Təsdiqlə</a>
+					</div>
+					<div class="mt-md-5 my-4">
+						<div class="invoice-preview row">
+							<div class="col-xxl-8 col-xl-9 col-lg-10 col-md-11 flex-column mx-xl-auto ms-auto">
+								<div class="d-flex align-items-center mb-md-5 mb-4">
+									<button class="btn btn-primary btn-step">1</button>
+									<h2>Biznes məlumatları</h2>
+								</div>
+								<div class="d-flex align-items-center mb-md-5 mb-4">
+									<button class="btn btn-primary btn-step">2</button>
+									<h2>Bank məlumatları</h2>
+								</div>
+								<div class="d-flex align-items-center">
+									<button class="btn btn-primary btn-step">3</button>
+									<h2>Hesab məlumatları</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>
